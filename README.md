@@ -1,4 +1,4 @@
-<h1>123grassiscool456: Games</h1>
+<h1>Grass Games</h1>
 <h3>Play fun games online!</h3>
 <p1></p>
 <a href="https://123grassiscool456.github.io/ruffleplayer">Ruffle Player</a>
