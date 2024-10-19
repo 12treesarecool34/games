@@ -15,3 +15,4 @@
 <p1></p>
 <a href="https://12grassiscool34.github.io/ruffleplayer-old">Ruffle Player (old)</a>
 <p1></p>
+<a href="https://forms.gle/pdeJPsLrm9bckuTj6">Request a Game</a><p1> - <p1><a href="https://forms.gle/DoMQ5LEtWxvjDnAs7">Subscribe</a>
