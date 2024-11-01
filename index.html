@@ -5,7 +5,6 @@
 <link rel="icon" type="image/png" href="./Favicon_Circle.png">
 </head>
 <body>
-<img src=https://github.com/12grassiscool34/games/blob/main/Favicon_Circle.png?raw=true style="width:100px;height:100px;">
 <h1>Grass Games</h1>
 <h3>Play fun games online!</h3>
 <p1></p>
