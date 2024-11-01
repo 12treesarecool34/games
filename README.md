@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Games - 12grassiscool34</title>
-<link rel="icon" type="image/png" href="./favicon.png">
+<link rel="icon" type="image/png" href="./Favicon_Circle.png">
 </head>
 <body>
 <img src=https://github.com/12grassiscool34/games/blob/main/Favicon_Circle.png?raw=true style="width:100px;height:100px;">
