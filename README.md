@@ -4,8 +4,8 @@
 <title>Games - 12grassiscool34</title>
 <link rel="icon" type="image/png" href="./Favicon_Circle.png"> <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 <style> body { font-family: 'Roboto', sans-serif;}
-a { color: #0000CD;}
-a[href="https://forms.gle/pdeJPsLrm9bckuTj6"] { color: red;} </style>
+a { color: blue;}
+a[href="https://forms.gle/pdeJPsLrm9bckuTj6"] { color: green;} </style>
 </head>
 <body>
 <h1>Grass Games</h1>
