@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grass Games</title>
+    <link rel="icon" type="image/png" href="./Favicon_Circle.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #282c34, #4b6cb7);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .spinner {
+            width: 100px;
+            height: 100px;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 5px solid #3498db;
+            animation: spin 0.5s linear infinite, fadeInSpinner 1s ease-in-out;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeInSpinner {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+    <script>
+        setTimeout(function() {
+            window.location.href = "https://12grassiscool34.github.io/games/games.html";
+        }, 20000);
+    </script>
+</head>
+<body>
+    <div class="spinner"></div>
+</body>
+</html>
