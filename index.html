@@ -30,6 +30,8 @@
 <p1></p>
 <a href="https://12grassiscool34.github.io/stacktris">Stacktris</a>
 <p1></p>
+<a href="https://12grassiscool34.github.io/stickmanhook">Stickman Hook</a>
+<p1></p>
 <a href="https://forms.gle/pdeJPsLrm9bckuTj6">Request a Game</a>
 </body>
 </html>
