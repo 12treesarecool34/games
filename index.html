@@ -7,58 +7,99 @@
 <style>
     body {
         font-family: 'Roboto', sans-serif;
-        background-color: white;
-        color: black;
+        background-color: #f4f4f4;
+        color: #333;
         text-align: center;
+        margin: 0;
+        padding: 0;
+        transition: background-color 0.5s, color 0.5s;
     }
     .dark-mode {
-        background-color: black;
+        background-color: #333;
+        color: #f4f4f4;
+    }
+    header {
+        background-color: #444;
         color: white;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        margin: 0;
+        font-size: 2.5em;
+        animation: fadeIn 1s ease-in-out;
+    }
+    h3 {
+        margin: 10px 0 20px;
+        font-size: 1.2em;
+    }
+    .container {
+        padding: 20px;
     }
     a {
-        color: blue;
+        color: #1a73e8;
+        text-decoration: none;
+        font-weight: bold;
+        display: block;
+        margin: 10px 0;
+        transition: color 0.3s;
     }
-    a[href="https://forms.gle/pdeJPsLrm9bckuTj6"] {
-        color: green;
+    a:hover {
+        text-decoration: underline;
+        color: #0d47a1;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #1a73e8;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    button:hover {
+        background-color: #0d47a1;
+        transform: scale(1.05);
+    }
+    .dark-mode a {
+        color: #4a90e2;
+    }
+    .dark-mode a:hover {
+        color: #ffffff;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
     }
 </style>
 </head>
 <body>
-<h1>Grass Games</h1>
-<h3>Play fun games online!</h3>
-<button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-<p></p>
-<a href="https://12grassiscool34.github.io/bitlife">BitLife</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/cookieclicker">Cookie Clicker</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/cuttherope/">Cut the Rope</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/monkeymart">Monkey Mart</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/poorbunny">Poor Bunny</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/retrobowl">Retro Bowl</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/retrobowlcollege">Retro Bowl College</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/ruffleplayer">Ruffle Player</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/ruffleplayer-regression">Ruffle Player Regression</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/sandtris">Sandtris</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/slope">Slope</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/stacktris">Stacktris</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/stickmanhook">Stickman Hook</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/subwaysurfers">Subway Surfers</a>
-<p></p>
-<a href="https://12grassiscool34.github.io/templerun2">Temple Run 2</a>
-<p></p>
-<a href="https://forms.gle/pdeJPsLrm9bckuTj6">Request a Game</a>
+<header>
+    <h1>Grass Games</h1>
+    <h3>Play fun games online!</h3>
+</header>
+<div class="container">
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <p></p>
+    <a href="https://12grassiscool34.github.io/bitlife">BitLife</a>
+    <a href="https://12grassiscool34.github.io/cookieclicker">Cookie Clicker</a>
+    <a href="https://12grassiscool34.github.io/cuttherope">Cut the Rope</a>
+    <a href="https://12grassiscool34.github.io/monkeymart">Monkey Mart</a>
+    <a href="https://12grassiscool34.github.io/poorbunny">Poor Bunny</a>
+    <a href="https://12grassiscool34.github.io/retrobowl">Retro Bowl</a>
+    <a href="https://12grassiscool34.github.io/retrobowlcollege">Retro Bowl College</a>
+    <a href="https://12grassiscool34.github.io/ruffleplayer">Ruffle Player</a>
+    <a href="https://12grassiscool34.github.io/ruffleplayer-old">Ruffle Player (old)</a>
+    <a href="https://12grassiscool34.github.io/ruffleplayer-regression">Ruffle Player Regression</a>
+    <a href="https://12grassiscool34.github.io/sandtris">Sandtris</a>
+    <a href="https://12grassiscool34.github.io/slope">Slope</a>
+    <a href="https://12grassiscool34.github.io/stacktris">Stacktris</a>
+    <a href="https://12grassiscool34.github.io/stickmanhook">Stickman Hook</a>
+    <a href="https://12grassiscool34.github.io/subwaysurfers">Subway Surfers</a>
+    <a href="https://12grassiscool34.github.io/templerun2">Temple Run 2</a>
+    <a href="https://forms.gle/pdeJPsLrm9bckuTj6" style="color: green;">Request a Game</a>
+</div>
 <script>
 function toggleDarkMode() {
     var element = document.body;
