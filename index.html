@@ -34,7 +34,7 @@
     <iframe src="https://12grassiscool34.github.io/games/games" title="Grass Games"></iframe>
     <div class="bottom-bar" id="bottomBar"></div>
     <script>
-        const messages = ["Games for when you're at school.", "Have schoolwork? Just play games.", "School is boring! Play games instead.", "Don't worry, all the games are unblocked.", "Sit back, relax, and play games."];
+        const messages = ["Unblocked games for school.","Have schoolwork to do? Just play games.","School is boring! Play games instead.","Stay entertained at school by playing games!"];
         function changeMessage() {
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
             document.getElementById('bottomBar').innerText = randomMessage;
@@ -42,7 +42,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             changeMessage();
-            setInterval(changeMessage, 5000);
+            setInterval(changeMessage, 10000);
         });
     </script>
 </body>
