@@ -32,6 +32,11 @@
 </head>
 <body>
     <iframe src="https://12grassiscool34.github.io/games/games" title="Grass Games"></iframe>
-    <div class="bottom-bar">School is boring, so just play games.</div>
+    <div class="bottom-bar" id="bottomBar"></div>
+    <script>
+        const messages = ["School is boring, so just play games.", "Keep playing games at school.", "Games are here for when you are bored.", "You have schoolwork? Just play games.", "We have unblocked games!"];
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        document.getElementById('bottomBar').innerText = randomMessage;
+    </script>
 </body>
 </html>
