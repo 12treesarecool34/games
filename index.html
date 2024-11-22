@@ -201,7 +201,7 @@
             Notification.requestPermission().then(permission => {
                 if (permission === "granted") {
                     setTimeout(() => {
-                        notifyUser("Introducing Tree", "Welcome to Tree, the next version of Grass.");
+                        notifyUser("Tree: Games", "This is Tree's game page.");
                     }, 10000);
                 } else {
                     document.body.innerHTML = '';
