@@ -3,7 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Games - Tree</title>
+    <title>Home - Tree</title>
     <link rel="icon" type="image/png" href="./Tree.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -40,6 +40,12 @@
         h3 {
             margin: 10px 0 20px;
             font-size: 1.2em;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        p {
+            margin: 10px 0 20px;
+            font-size: 1em;
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -89,6 +95,24 @@
             color: #ffffff;
         }
 
+        iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            z-index: 1000;
+        }
+
+        #embed-overlay {
+            display: none;
+        }
+
+        #embed-overlay.active {
+            display: block;
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -127,42 +151,45 @@
 
 <body>
     <header>
-        <h1>Tree: Games</h1>
-        <h3>Play fun games online!</h3>
+        <h1>Tree: Home</h1>
+        <h3>Just some GitHub stuff</h3>
     </header>
     <div class="container">
         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
         <p></p>
-        <a href="https://12treesarecool34.github.io/bitlife">BitLife</a>
-        <a href="https://12treesarecool34.github.io/cookieclicker">Cookie Clicker</a>
-        <a href="https://12treesarecool34.github.io/crossyroad">Crossy Road</a>
-        <a href="https://12treesarecool34.github.io/cuttherope">Cut the Rope</a>
-        <a href="https://12treesarecool34.github.io/doodlejump">Doodle Jump</a>
-        <a href="https://12treesarecool34.github.io/eaglercraft">Eaglercraft</a>
-        <a href="https://12treesarecool34.github.io/fnaf">FNAF</a>
-        <a href="https://12treesarecool34.github.io/fnaf2">FNAF 2</a>
-        <a href="https://12treesarecool34.github.io/fnaf3">FNAF 3</a>
-        <a href="https://12treesarecool34.github.io/fnaf4">FNAF 4</a>
-        <a href="https://12treesarecool34.github.io/fnafsisterlocation">FNAF Sister Location</a>
-        <a href="https://12treesarecool34.github.io/fruitninja">Fruit Ninja</a>
-        <a href="https://12treesarecool34.github.io/gba">GBA Emulator</a>
-        <a href="https://12treesarecool34.github.io/littlealchemy2">Little Alchemy 2</a>
-        <a href="https://12treesarecool34.github.io/monkeymart">Monkey Mart</a>
-        <a href="https://12treesarecool34.github.io/paperminecraft">Paper Minecraft</a>
-        <a href="https://12treesarecool34.github.io/poorbunny">Poor Bunny</a>
-        <a href="https://12treesarecool34.github.io/retrobowl">Retro Bowl</a>
-        <a href="https://12treesarecool34.github.io/retrobowlcollege">Retro Bowl College</a>
-        <a href="https://12treesarecool34.github.io/ruffleplayer">Ruffle Player</a>
-        <a href="https://12treesarecool34.github.io/ruffleplayer-regression">Ruffle Player Regression</a>
-        <a href="https://12treesarecool34.github.io/sandtris">Sandtris</a>
-        <a href="https://12treesarecool34.github.io/slope">Slope</a>
-        <a href="https://12treesarecool34.github.io/stacktris">Stacktris</a>
-        <a href="https://12treesarecool34.github.io/stickmanhook">Stickman Hook</a>
-        <a href="https://12treesarecool34.github.io/subwaysurfers">Subway Surfers</a>
-        <a href="https://12treesarecool34.github.io/templerun2">Temple Run 2</a>
-        <a href="https://12cookiesarecool34.github.io">The Pizza Edition (Cookie)</a>
-        <a href="https://12treesarecool34.github.io/wordleunlimited">Wordle Unlimited</a>
-        <a href="https://12treesarecool34.github.io/whydidthechickencrosstheroad">Why Did The Chicken Cross The Road</a>
+        <a href="https://12treesarecool34.github.io/bitlife" onclick="openEmbed(event, 'https://12treesarecool34.github.io/bitlife')">BitLife</a>
+        <a href="https://12treesarecool34.github.io/cookieclicker" onclick="openEmbed(event, 'https://12treesarecool34.github.io/cookieclicker')">Cookie Clicker</a>
+        <a href="https://12treesarecool34.github.io/crossyroad" onclick="openEmbed(event, 'https://12treesarecool34.github.io/crossyroad')">Crossy Road</a>
+        <a href="https://12treesarecool34.github.io/cuttherope" onclick="openEmbed(event, 'https://12treesarecool34.github.io/cuttherope')">Cut the Rope</a>
+        <a href="https://12treesarecool34.github.io/doodlejump" onclick="openEmbed(event, 'https://12treesarecool34.github.io/doodlejump')">Doodle Jump</a>
+        <a href="https://12treesarecool34.github.io/eaglercraft" onclick="openEmbed(event, 'https://12treesarecool34.github.io/eaglercraft')">Eaglercraft</a>
+        <a href="https://12treesarecool34.github.io/fruitninja" onclick="openEmbed(event, 'https://12treesarecool34.github.io/fruitninja')">Fruit Ninja</a>
+        <a href="https://12treesarecool34.github.io/fnaf" onclick="openEmbed(event, 'https://12treesarecool34.github.io/fnaf')">FNAF</a>
+        <a href="https://12treesarecool34.github.io/fnaf2" onclick="openEmbed(event, 'https://12treesarecool34.github.io/fnaf2')">FNAF 2</a>
+        <a href="https://12treesarecool34.github.io/fnaf3" onclick="openEmbed(event, 'https://12treesarecool34.github.io/fnaf3')">FNAF 3</a>
+        <a href="https://12treesarecool34.github.io/fnaf4" onclick="openEmbed(event, 'https://12treesarecool34.github.io/fnaf4')">FNAF 4</a>
+        <a href="https://12treesarecool34.github.io/fnafsisterlocation" onclick="openEmbed(event, 'https://12treesarecool34.github.io/fnafsisterlocation')">FNAF Sister Location</a>
+        <a href="https://12treesarecool34.github.io/gba" onclick="openEmbed(event, 'https://12treesarecool34.github.io/gba')">GBA Emulator</a>
+        <a href="https://12treesarecool34.github.io/littlealchemy2" onclick="openEmbed(event, 'https://12treesarecool34.github.io/littlealchemy2')">Little Alchemy 2</a>
+        <a href="https://12treesarecool34.github.io/monkeymart" onclick="openEmbed(event, 'https://12treesarecool34.github.io/monkeymart')">Monkey Mart</a>
+        <a href="https://12treesarecool34.github.io/paperminecraft" onclick="openEmbed(event, 'https://12treesarecool34.github.io/paperminecraft')">Paper Minecraft</a>
+        <a href="https://12treesarecool34.github.io/poorbunny" onclick="openEmbed(event, 'https://12treesarecool34.github.io/poorbunny')">Poor Bunny</a>
+        <a href="https://12treesarecool34.github.io/retrobowl" onclick="openEmbed(event, 'https://12treesarecool34.github.io/retrobowl')">Retro Bowl</a>
+        <a href="https://12treesarecool34.github.io/retrobowlcollege" onclick="openEmbed(event, 'https://12treesarecool34.github.io/retrobowlcollege')">Retro Bowl College</a>
+        <a href="https://12treesarecool34.github.io/ruffleplayer" onclick="openEmbed(event, 'https://12treesarecool34.github.io/ruffleplayer')">Ruffle Player</a>
+        <a href="https://12treesarecool34.github.io/ruffleplayer-regression" onclick="openEmbed(event, 'https://12treesarecool34.github.io/ruffleplayer-regression')">Ruffle Player Regression</a>
+        <a href="https://12treesarecool34.github.io/sandtris" onclick="openEmbed(event, 'https://12treesarecool34.github.io/sandtris')">Sandtris</a>
+        <a href="https://12treesarecool34.github.io/slope" onclick="openEmbed(event, 'https://12treesarecool34.github.io/slope')">Slope</a>
+        <a href="https://12treesarecool34.github.io/stacktris" onclick="openEmbed(event, 'https://12treesarecool34.github.io/stacktris')">Stacktris</a>
+        <a href="https://12treesarecool34.github.io/stickmanhook" onclick="openEmbed(event, 'https://12treesarecool34.github.io/stickmanhook')">Stickman Hook</a>
+        <a href="https://12treesarecool34.github.io/subwaysurfers" onclick="openEmbed(event, 'https://12treesarecool34.github.io/subwaysurfers')">Subway Surfers</a>
+        <a href="https://12treesarecool34.github.io/templerun2" onclick="openEmbed(event, 'https://12treesarecool34.github.io/templerun2')">Temple Run 2</a>
+        <a href="https://12cookiesarecool34.github.io" onclick="openEmbed(event, 'https://12cookiesarecool34.github.io')">The Pizza Edition (Cookie)</a>
+        <a href="https://12treesarecool34.github.io/wordleunlimited" onclick="openEmbed(event, 'https://12treesarecool34.github.io/wordleunlimited')">Wordle Unlimited</a>
+        <a href="https://12treesarecool34.github.io/whydidthechickencrosstheroad" onclick="openEmbed(event, 'https://12treesarecool34.github.io/whydidthechickencrosstheroad')">Why Did The Chicken Cross The Road</a>
+    </div>
+    <div id="embed-overlay">
+        <iframe id="embed-frame"></iframe>
     </div>
     <script>
         function toggleDarkMode() {
@@ -170,28 +197,15 @@
             element.classList.toggle("dark-mode");
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                document.body.classList.add("dark-mode");
-            }
-        });
-
         function notifyUser(title, body) {
             if (Notification.permission === "granted") {
-                const notification = new Notification(title, {
-                    body: body,
-                    requireInteraction: true // Ensures the notification remains until clicked
-                });
-
-                notification.onclick = () => {
-                    window.open("https://12treesarecool34.github.io/updates");
-                };
+                new Notification(title, { body: body });
             }
         }
 
-        async function fetchUpdates() {
+        async function checkForUpdates() {
             try {
-                const response = await fetch('https://12treesarecool34.github.io/updates');
+                const response = await fetch('https://12treesarecool34.github.io/notify');
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
                 }
@@ -211,20 +225,49 @@
                     }
                 }
             } catch (error) {
-                console.error('Failed to fetch updates:', error);
+                console.error('Failed to check for updates:', error);
             }
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            if (Notification.permission === "granted") {
-                fetchUpdates();
-            } else if (Notification.permission !== "denied") {
-                Notification.requestPermission().then(permission => {
-                    if (permission === "granted") {
-                        fetchUpdates();
-                    }
-                });
+        function checkNotificationPermission() {
+            if (Notification.permission !== "granted") {
+                window.location.href = "./error";
             }
+        }
+
+        function openEmbed(event, url) {
+            event.preventDefault();
+            document.getElementById('embed-frame').src = url;
+            document.getElementById('embed-overlay').classList.add('active');
+        }
+
+        function closeEmbed() {
+            document.getElementById('embed-overlay').classList.remove('active');
+            document.getElementById('embed-frame').src = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add("dark-mode");
+            }
+
+            Notification.requestPermission().then(permission => {
+                if (permission === "granted") {
+                    setTimeout(() => {
+                        localStorage.setItem('cooldownComplete', 'true');
+                        checkForUpdates();
+                        setInterval(checkForUpdates, 5 * 60 * 1000); // Check every 5 minutes
+                    }, 10000); // 10-second cooldown
+                } else {
+                    window.location.href = "./error";
+                }
+            });
+
+            if (localStorage.getItem('cooldownComplete')) {
+                setInterval(checkNotificationPermission, 500); // Check notification permission every 0.5 seconds
+            }
+
+            document.getElementById('embed-overlay').addEventListener('click', closeEmbed);
         });
     </script>
 </body>
