@@ -175,8 +175,7 @@
                 document.body.classList.add("dark-mode");
             }
         });
-    </script>
-    <script>
+
         function notifyUser(title, body) {
             if (Notification.permission === "granted") {
                 new Notification(title, {
@@ -198,7 +197,13 @@
                 const pElement = h3Element ? h3Element.nextElementSibling : null;
 
                 if (h3Element && pElement) {
-                    notifyUser(h3Element.textContent, pElement.textContent);
+                    const newUpdate = `${h3Element.textContent} - ${pElement.textContent}`;
+                    const previousUpdate = localStorage.getItem('latestUpdate');
+
+                    if (newUpdate !== previousUpdate) {
+                        notifyUser(h3Element.textContent, pElement.textContent);
+                        localStorage.setItem('latestUpdate', newUpdate);
+                    }
                 }
             } catch (error) {
                 console.error('Failed to fetch updates:', error);
