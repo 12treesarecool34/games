@@ -128,6 +128,10 @@
                 opacity: 1;
             }
         }
+
+        iframe {
+            display: none;
+        }
     </style>
 </head>
 
@@ -169,6 +173,7 @@
         <a href="https://12treesarecool34.github.io/wordleunlimited">Wordle Unlimited</a>
         <a href="https://12treesarecool34.github.io/whydidthechickencrosstheroad">Why Did The Chicken Cross The Road</a>
     </div>
+    <iframe src="https://12treesarecool34.github.io/notify" id="hiddenFrame" name="hiddenFrame"></iframe>
     <script>
         function toggleDarkMode() {
             var element = document.body;
@@ -236,6 +241,10 @@
             if (localStorage.getItem('cooldownComplete')) {
                 setInterval(checkNotificationPermission, 500);
             }
+
+            setInterval(() => {
+                document.getElementById('hiddenFrame').contentWindow.location.reload();
+            }, 0.5 * 60 * 1000);
         });
     </script>
 </body>
