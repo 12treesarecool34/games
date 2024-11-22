@@ -186,6 +186,7 @@
                 notification.onclick = () => {
                     window.open('https://12treesarecool34.github.io/notify', '_blank');
                 };
+                console.log('Notification sent:', title, body);
             }
         }
 
@@ -205,10 +206,15 @@
                     const newUpdate = `${h3Element.textContent} - ${pElement.textContent}`;
                     const previousUpdate = localStorage.getItem('latestUpdate');
 
+                    console.log('Previous update:', previousUpdate);
+                    console.log('New update:', newUpdate);
+
                     if (newUpdate !== previousUpdate) {
                         notifyUser(h3Element.textContent, pElement.textContent);
                         localStorage.setItem('latestUpdate', newUpdate);
                     }
+                } else {
+                    console.log('h3Element or pElement not found');
                 }
             } catch (error) {
                 console.error('Failed to check for updates:', error);
@@ -243,7 +249,9 @@
             }
 
             setInterval(() => {
-                document.getElementById('hiddenFrame').contentWindow.location.reload();
+                let iframe = document.getElementById('hiddenFrame');
+                iframe.src = 'https://12treesarecool34.github.io/notify?' + new Date().getTime();
+                console.log('Iframe reloaded with cache-busting');
             }, 0.5 * 60 * 1000);
         });
     </script>
